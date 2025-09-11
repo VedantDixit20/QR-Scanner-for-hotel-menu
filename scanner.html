@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Oberoi, Mumbai - Visiting Card</title>
+  
+  <style>
+  body { 
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    height: 100vh;
+    background: url('oberpo2.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #010101;
+    position: relative;
+  }
+
+  /* Dark overlay above background image */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55); /* dim effect */
+    z-index: 0; /* stays behind card */
+  }
+
+  .card {
+    position: relative;
+    z-index: 1; /* makes card sit above overlay */
+    max-width: 500px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.85); /* frosted glass look */
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+  }
+
+  .header {
+    background: linear-gradient(45deg, #f9f9f9, #ddd);
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid gold;
+  }
+
+  .header h2 {
+    margin: 0;
+    font-size: 22px;
+    color: gold;
+  }
+
+  .header p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #444;
+  }
+
+  .header a {
+    font-size: 12px; /* smaller button */
+    color: #000000;
+    background: gold;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 6px;
+  }
+
+  .section button {
+    width: 100%;
+    background: rgba(255,255,255,0.9);
+    color: #333;
+    padding: 12px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.3s ease;
+  }
+
+  .section button:hover {
+    background: #e0e0e0;
+  }
+
+  .content {
+    display: none;
+    padding: 15px;
+    background: rgba(250, 250, 250, 0.9);
+    color: #111;
+    line-height: 1.6;
+    font-size: 14px;
+  }
+
+  .content p {
+    margin: 0 0 10px;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="card">
+  <div class="header">
+    <h2>The Oberoi, Mumbai</h2>
+    <p>@theoberoimumbai</p>
+    <p><p>It is our privilege to have you with us. At The Oberoi, Mumbai, we are committed to delivering a refined experience defined by warm hospitality, personalised service, and attention to detail. Whether your visit is for business or leisure, our team is dedicated to ensuring your stay is both comfortable and memorable.Please feel free to contact our staff at any time for assistance, recommendations, or special arrangements. We wish you a pleasant stay and look forward to making your time with us truly exceptional.</p></p>
+    <a href="https://www.oberoihotels.com/hotels-in-mumbai/" target="_blank">Visit Website</a>
+  </div>
+
+  <div class="section">
+    <button onclick="toggleContent('room')">🏨 Room Features</button>
+    <div id="room" class="content">
+      <p><b>Wi-Fi Access:</b> Connect to Oberoi Wi-Fi, login with room number & last name, set a 5‑digit password. Multiple devices supported.</p>
+      <p><b>Laundry Services:</b> Laundry bag & slip in closet. Fill slip, place bag outside your room for collection.</p>
+      <p><b>Thermostat:</b> Adjust near entrance to set preferred room temperature.</p>
+      <p><b>In‑room Safe:</b> Electronic safe with personal passcode for valuables.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <button onclick="toggleContent('dining')">🍽 Dining</button>
+    <div id="dining" class="content">
+      <p><b>Fenix:</b> Global fine dining, sushi bar & tandoor. 6:30 am–11:30 pm.</p>
+      <p><b>Vetro & Enoteca:</b> Italian cuisine, wine library, live music Thu–Sat. Lunch 12:30–3 pm; Dinner 7–11 pm.</p>
+      <p><b>Ziya:</b> Modern Indian by Chef Vineet Bhatia. Lunch 12:30–3 pm; Dinner 7–11:30 pm.</p>
+      <p><b>Patisserie:</b> Cakes, breads, cheeses & fine wines. 10 am–8 pm.</p>
+      <p><b>Eau Bar:</b> Cocktails, live music & DJ. 5 pm–1:30 am.</p>
+      <p><b>Champagne Lounge:</b> Teas, coffee, champagne & live piano. 8 am–11:30 pm.</p>
+      <p><b>Frangipani (Trident):</b> Indian, Italian & Mediterranean. 7 am–12:30 am.</p>
+      <p><b>Ness (Trident):</b> Sea‑view bar with cocktails & DJ. 12:30 pm–1 am.</p>
+      <p><b>India Jones (Trident):</b> Authentic Pan‑Asian dining. 12:30–11:30 pm.</p>
+      <p><b>The Verandah:</b> 24‑hour café & lounge overlooking the sea.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <button onclick="toggleContent('wellness')">💆 Wellness</button>
+    <div id="wellness" class="content">
+      <p><b>Swimming Pool:</b> Courtyard retreat with loungers. 7 am–7 pm.</p>
+      <p><b>Spa:</b> Signature therapies & yoga. 7 am–11 pm.</p>
+      <p><b>Fitness Centre:</b> 24/7, ocean views, modern equipment.</p>
+      <p><b>Business Centre:</b> Dedicated meeting rooms & workspaces.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <button onclick="toggleContent('experiences')">✨ Experiences</button>
+    <div id="experiences" class="content">
+      <p>🌙 Private Poolside Dinner – Candlelit ocean‑view dining.</p>
+      <p>🍷 Wine Tasting – Wine tasting experience at Vetro.</p>
+      <p>👩‍🍳 Junior Chef – Fun cookie‑making for kids.</p>
+      <p>🥘 Cook with a Master Chef – Learn & dine experience.</p>
+      <p>🏛 Heritage Walk – Explore Mumbai landmarks.</p>
+      <p>🌅 Mumbai at Dawn – Bazaars, chai & traditions.</p>
+      <p>🌶 Spice Trail – Market tour with an Oberoi chef.</p>
+      <p>🎨 Art Kaleidoscope – Kala Ghoda galleries tour.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <button onclick="toggleContent('attractions')">📍 Local Attractions</button>
+    <div id="attractions" class="content">
+      <p><b>Gateway of India:</b> Iconic 20th‑century arch monument.</p>
+      <p><b>Haji Ali Dargah:</b> Famous mosque on a sea islet.</p>
+      <p><b>Colaba Causeway:</b> Shopping & cultural hub.</p>
+      <p><b>Elephanta Caves:</b> UNESCO rock‑cut temples.</p>
+      <p><b>Siddhivinayak Temple:</b> Renowned Ganesh shrine.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleContent(id) {
+  var section = document.getElementById(id);
+  section.style.display = section.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
